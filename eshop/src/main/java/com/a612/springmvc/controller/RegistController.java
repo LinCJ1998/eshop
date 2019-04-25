@@ -1,6 +1,5 @@
 package com.a612.springmvc.controller;
 
-import com.a612.springmvc.entity.Message;
 import com.a612.springmvc.entity.Userinfo;
 import com.a612.springmvc.service.RegistService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +30,7 @@ public class RegistController {
                 System.out.println(emailCount);
                 if (emailCount==0) {
                     registService.insertSelective(userinfo);
-                    return "success";
+                    return "/success.jsp";
                 }
             }
         }

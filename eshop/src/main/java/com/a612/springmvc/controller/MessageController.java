@@ -4,7 +4,6 @@ import com.a612.springmvc.entity.Goodstype;
 import com.a612.springmvc.entity.Message;
 import com.a612.springmvc.service.GoodstypeService;
 import com.a612.springmvc.service.MessageService;
-import com.a612.springmvc.service.impl.MessageServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,7 +30,7 @@ public class MessageController{
         String password = request.getParameter("password");
         if(username.equals("root") && password.equals("root")){
             model.addAttribute("msg", "success");
-            return "success";
+            return "/success.jsp";
         }else{
             return "error";
         }
