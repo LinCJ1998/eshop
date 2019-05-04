@@ -10,10 +10,11 @@ import org.springframework.stereotype.Service;
 public class GoodstypeServiceImpl implements GoodstypeService{
     @Autowired
     private GoodstypeMapper mapper;
-
     @Override
     public int insertSelective(Goodstype goodstype) {
         mapper.insertSelective(goodstype);
         return 0;
     }
+
+
 }

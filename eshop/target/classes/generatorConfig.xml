@@ -67,5 +67,10 @@
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="true">
         </table>
+        <table tableName="goodsinfo" schema="goodsinfo"
+            enableCountByExample="false" enableUpdateByExample="false"
+            enableDeleteByExample="false" enableSelectByExample="false"
+            selectByExampleQueryId="false">
+        </table>
     </context>
 </generatorConfiguration>

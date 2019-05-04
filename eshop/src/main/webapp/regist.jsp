@@ -12,7 +12,7 @@
     <title>Title</title>
     <style>
         body{
-            background-image: url("http://pic22.nipic.com/20120710/8395663_092959337000_2.jpg");
+            background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556262323098&di=89cf8f4d0a746939ef4dbc15fb7209d9&imgtype=0&src=http%3A%2F%2Fpic.uzzf.com%2Fup%2F2012-8%2F20128585644.png");
             background-repeat: no-repeat;
             background-size:100% 100%;
             background-attachment: fixed;
@@ -45,7 +45,7 @@
     </style>
 </head>
 <body>
-<div style="height:80px;"></div>
+<div style="height:80px;text-align: center"></div>
 <form action="/regist">
     <div style="width:500px;margin:0 20px;text-align:center">
         <div style="font-size:28px;">注册新用户</div>
