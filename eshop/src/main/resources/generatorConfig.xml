@@ -62,7 +62,7 @@
             enableDeleteByExample="false" enableSelectByExample="false"
             selectByExampleQueryId="true">
         </table>
-        <table tableName="goodstype" schema="goodstype2"
+        <table tableName="goodstype" schema="goodstype"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="true">
@@ -71,6 +71,21 @@
             enableCountByExample="false" enableUpdateByExample="false"
             enableDeleteByExample="false" enableSelectByExample="false"
             selectByExampleQueryId="false">
+        </table>
+        <table tableName="admin" schema="admin"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+        <table tableName="goodsorder" schema="goodsorder"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+        <table tableName="goodsitem" schema="goodsitem"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
         </table>
     </context>
 </generatorConfiguration>

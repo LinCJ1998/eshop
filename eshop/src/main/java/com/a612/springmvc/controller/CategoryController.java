@@ -24,7 +24,7 @@ public class CategoryController {
         ArrayList<Goodsinfo> list=goodsInfoService.selectAllByGoodsId(1);
         for (Goodsinfo goodsinfo:list
              ) {
-            System.out.println(goodsinfo.getGoodsname());
+            System.out.println(goodsinfo.getGoodsName());
         }
         List<String> l=new LinkedList<String>();
         l.add("11");

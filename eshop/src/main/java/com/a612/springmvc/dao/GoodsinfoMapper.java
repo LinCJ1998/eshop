@@ -17,8 +17,8 @@ public interface GoodsinfoMapper {
      * @mbggenerated Thu May 02 17:20:43 CST 2019
      */
     @Delete({
-        "delete from goodsinfo",
-        "where goodsId = #{goodsid,jdbcType=INTEGER}"
+            "delete from goodsinfo",
+            "where goodsId = #{goodsid,jdbcType=INTEGER}"
     })
     int deleteByPrimaryKey(Integer goodsid);
 
@@ -29,12 +29,12 @@ public interface GoodsinfoMapper {
      * @mbggenerated Thu May 02 17:20:43 CST 2019
      */
     @Insert({
-        "insert into goodsinfo (goodsId, goodsTypeid, ",
-        "goodsName, goodsMoney, ",
-        "goodsNote)",
-        "values (#{goodsid,jdbcType=INTEGER}, #{goodstypeid,jdbcType=INTEGER}, ",
-        "#{goodsname,jdbcType=VARCHAR}, #{goodsmoney,jdbcType=REAL}, ",
-        "#{goodsnote,jdbcType=LONGVARCHAR})"
+            "insert into goodsinfo (goodsId, goodsTypeid, ",
+            "goodsName, goodsMoney, ",
+            "goodsNote)",
+            "values (#{goodsid,jdbcType=INTEGER}, #{goodstypeid,jdbcType=INTEGER}, ",
+            "#{goodsname,jdbcType=VARCHAR}, #{goodsmoney,jdbcType=REAL}, ",
+            "#{goodsnote,jdbcType=LONGVARCHAR})"
     })
     int insert(Goodsinfo record);
 
@@ -53,10 +53,10 @@ public interface GoodsinfoMapper {
      * @mbggenerated Thu May 02 17:20:43 CST 2019
      */
     @Select({
-        "select",
-        "goodsId, goodsTypeid, goodsName, goodsMoney, goodsNote",
-        "from goodsinfo",
-        "where goodsId = #{goodsid,jdbcType=INTEGER}"
+            "select",
+            "goodsId, goodsTypeid, goodsName, goodsMoney, goodsNote",
+            "from goodsinfo",
+            "where goodsId = #{goodsid,jdbcType=INTEGER}"
     })
     @ResultMap("ResultMapWithBLOBs")
     Goodsinfo selectByPrimaryKey(Integer goodsid);
@@ -76,12 +76,12 @@ public interface GoodsinfoMapper {
      * @mbggenerated Thu May 02 17:20:43 CST 2019
      */
     @Update({
-        "update goodsinfo",
-        "set goodsTypeid = #{goodstypeid,jdbcType=INTEGER},",
-          "goodsName = #{goodsname,jdbcType=VARCHAR},",
-          "goodsMoney = #{goodsmoney,jdbcType=REAL},",
-          "goodsNote = #{goodsnote,jdbcType=LONGVARCHAR}",
-        "where goodsId = #{goodsid,jdbcType=INTEGER}"
+            "update goodsinfo",
+            "set goodsTypeid = #{goodstypeid,jdbcType=INTEGER},",
+            "goodsName = #{goodsname,jdbcType=VARCHAR},",
+            "goodsMoney = #{goodsmoney,jdbcType=REAL},",
+            "goodsNote = #{goodsnote,jdbcType=LONGVARCHAR}",
+            "where goodsId = #{goodsid,jdbcType=INTEGER}"
     })
     int updateByPrimaryKeyWithBLOBs(Goodsinfo record);
 
@@ -92,11 +92,11 @@ public interface GoodsinfoMapper {
      * @mbggenerated Thu May 02 17:20:43 CST 2019
      */
     @Update({
-        "update goodsinfo",
-        "set goodsTypeid = #{goodstypeid,jdbcType=INTEGER},",
-          "goodsName = #{goodsname,jdbcType=VARCHAR},",
-          "goodsMoney = #{goodsmoney,jdbcType=REAL}",
-        "where goodsId = #{goodsid,jdbcType=INTEGER}"
+            "update goodsinfo",
+            "set goodsTypeid = #{goodstypeid,jdbcType=INTEGER},",
+            "goodsName = #{goodsname,jdbcType=VARCHAR},",
+            "goodsMoney = #{goodsmoney,jdbcType=REAL}",
+            "where goodsId = #{goodsid,jdbcType=INTEGER}"
     })
     int updateByPrimaryKey(Goodsinfo record);
 

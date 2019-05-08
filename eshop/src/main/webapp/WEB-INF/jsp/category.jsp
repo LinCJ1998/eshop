@@ -54,7 +54,7 @@
                 <div class="data">
                     <ul>
                         <c:forEach items="${list}" var="goods">
-                            <p>${goods.goodsname}</p>
+                            <p>${goods.goodsName}</p>
                         </c:forEach>
 
                         <div class="clear-float" style="clear: both;"></div>

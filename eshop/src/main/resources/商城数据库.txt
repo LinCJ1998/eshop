@@ -1,0 +1,85 @@
+一、建立数据库
+CREATE DATABASE IF NOT EXISTS eshop CHARACTER utf8;
+二、建立数据库表
+1、建立用户表
+ 
+#用户表(用户id号，用户名，用户密码，手机号，性别，注册日期，最近登录时间)
+CREATE TABLE userinfo(
+user_id int AUTO_INCREMENT PRIMARY KEY,
+user_name varchar(20) NOT NULL UNIQUE KEY,
+user_pwd varchar(20) NOT NULL,
+user_email char(20) NOT NULL,
+user_sex varchar(2) DEFAULT '男',
+user_registetime datetime,
+user_lastdate datetime 
+);
+ 
+2、建立商品类型表
+ 
+#商品类型(商品类型id号，商品名, 商品类型简介)
+create table goodstype(
+goodstype_id int auto_increment primary key,
+goodstype_name varchar(50) not null,
+goodstype_description text 
+);
+ 
+
+3、建立商品信息表
+ 
+#商品信息表(商品id号，商品类型id，商品名，商品简介，价格)
+create table goodsinfo(
+goods_id int auto_increment primary key,
+goodstype_id int not null,
+goods_name varchar(50) not null,
+goods_note text,
+goods_prize float(6,2) not null，
+);
+ 
+4、建立管理员表
+ 
+#管理员表(管理员id号，账号，密码，权限等级)
+create table admin(
+admin_id int AUTO_INCREMENT PRIMARY KEY,
+admin_name varchar(10) NOT NULL UNIQUE KEY,
+admin_pwd varchar(20) NOT NULL,
+admin_level int NOT NULL default '1'
+);
+ 
+5、建立购物车表
+ 
+#购物车表(购物车id，用户id，订单总数，订单总价格，是否支付，支付方式)
+create table cart(
+cart_id int auto_increment primary key,
+user_id int not null,
+cart_ordercount int not null,
+cart_totalprice float(8,2) not null,
+cart_ispaid varchar(6) default '未支付',
+sPaymethod varchar(20) default '无',
+CONSTRAINT chk_sIspay CHECK (sIspay in ('未支付','已支付'))
+);
+ 
+6、建立订单表
+ 
+#订单表(订单id，用户id，商品项id号，订单日期，订单价格，备注，收件人，地址，收件人手机号，订单状态)
+create table order(
+order_id int auto_increment primary key,
+user_id int not null,
+goods_id int not null,
+order_date datetime not null,
+order_price float(6,2) not null,
+order_message varchar(100),
+order_addressee varchar(20) not null,
+order_address varchar(100) not null,
+order_phone varchar(11) not null,
+order_status varchar(6) default '未完成'
+);
+
+7.建立商品项(商品项id，商品id，商品数量，商品单价，商品项总价，订单id)
+create table goodsitem(
+ goodsitem_id int auto_increment primary key,
+ goods_id int not null,
+ goods_num int not null,
+ goods_prize  float(6,2)  not null,
+ goodsitem_prize float(6,2)  not null,
+ order_id int not null
+)
